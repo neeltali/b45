@@ -23,14 +23,16 @@ abstract void mirror();
 		System.out.println("speed should not be more than 60km");
 	}
 
-	public static void main(String[] args) {
-		Seltos obj = new Seltos();
-		obj.helmet();
-		obj.mirror();
-		obj.speedlimist();
-		
-		
 
-	}
 
+		public static void main(String[] args) {
+			Seltos obj = new Seltos();
+			obj.helmet();
+			obj.mirror();
+			obj.speedlimist();
+			
+			
+
+		}
 }
+

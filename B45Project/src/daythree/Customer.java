@@ -52,6 +52,8 @@ public String toString() {
 			+ ", getCustomerCity()=" + getCustomerCity() + ", getCustomerId()=" + getCustomerId()
 			+ ", getCustomerName()=" + getCustomerName() + "]";
 }
+
+
 }
  
  
