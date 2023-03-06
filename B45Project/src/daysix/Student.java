@@ -1,43 +1,60 @@
 package daysix;
 
-public class Student extends Citizen  {
-	private int rollNo;
-	private String collegeName;
-
-	public Student() {
-		super();
+public class Student extends Person {
+	private String clas;
+	private float per;
+	public Student () {
+		System.out.println("Student class default constructor");
+		clas="FY";
+		per=70;
+		
 	}
-
-	public Student(String name, String aadharNo, String address, long phno, int rollNo, String collegeName) {
-		super(name, aadharNo, address, phno); //accessing parent class constructor
-		this.rollNo = rollNo;
-		this.collegeName = collegeName;
+	public Student (String clas, float per ){
+		this.clas=clas;
+		this.per=per;
+		
 	}
-
-	public int getRollNo() {
-		return rollNo;
+	/**
+	 * @return the clas
+	 */
+	public String getClas() {
+		return clas;
 	}
-
-	public void setRollNo(int rollNo) {
-		this.rollNo = rollNo;
+	/**
+	 * @param clas the clas to set
+	 */
+	public void setClas(String clas) {
+		this.clas = clas;
 	}
-
-	public String getCollegeName() {
-		return collegeName;
+	/**
+	 * @return the per
+	 */
+	public float getPer() {
+		return per;
 	}
-
-	public void setCollegeName(String collegeName) {
-		this.collegeName = collegeName;
+	/**
+	 * @param per the per to set
+	 */
+	public void setPer(float per) {
+		this.per = per;
 	}
-
+	
+	public Student( String name, String city, String clas, float per) {
+		/*super.name=name;
+		super.city=city;*/     // private member cant inherite in child class
+		
+		super (name,city);
+		this.clas=clas;
+		
+		this.per=per;
+		
+		
+	}
 	@Override
 	public String toString() {
-		return "Student [rollNo=" + rollNo + ", collegeName=" + collegeName + ", Name=" + getName()
-				+ ", AadharNo=" + getAadharNo() + ", Address=" + getAddress() + ", Phno=" + getPhno()
-				
-				+ "]";
+		return "Student [clas=" + clas + ", per=" + per + " , getName()=" + getName() + " , getCity()=" + getCity()+ "]";
 	}
-
 	
+
 	
 }
