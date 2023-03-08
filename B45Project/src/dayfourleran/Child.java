@@ -15,11 +15,14 @@ abstract class laptops
 
 
 class Child extends laptops {
-	{
+	
+	
 		void weiht ()
 		{
 			System.out.println("should be less");
 		}
+		
+		
 		void model() {
 			System.out.println("mnk");
 		}
@@ -32,7 +35,7 @@ class Child extends laptops {
 		void display() {
 			System.out.println("clear");
 		}
-	}
+	
 
 	public static void main(String[] args) {
 		Child obj=new Child();
